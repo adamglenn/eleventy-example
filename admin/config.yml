@@ -3,8 +3,10 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+site_url: https://ag-11ty-example.netlify.app
+display_url: https://ag-11ty-example.netlify.app
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "_posts/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection

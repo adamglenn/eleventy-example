@@ -4,6 +4,7 @@ const { Liquid } = require("liquidjs");
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("stylesheets/styles.css");
     eleventyConfig.addPassthroughCopy("admin/config.yml");
+    eleventyConfig.addPassthroughCopy("admin/styles.css");
     eleventyConfig.addPlugin(EleventyRenderPlugin);
 
     let options = {

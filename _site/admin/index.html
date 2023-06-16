@@ -16,7 +16,7 @@
             var entry = this.props.entry;
             var image = entry.getIn(['data', 'image']);
             var bg = this.props.getAsset(image);
-            return h('div', {"className": "display-2"},
+            return h('div', {},
             h('h1', {"className": "display-2"}, entry.getIn(['data', 'title'])),
             h('img', {src: bg.toString()}),
             h('div', {"className": "text text-primary"}, this.props.widgetFor('body'))

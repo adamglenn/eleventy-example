@@ -13,6 +13,20 @@
     <script src="https://unpkg.com/netlify-cms@^0.7.0/dist/cms.js"></script>
     <script>
         CMS.registerPreviewStyle("./stylesheets/styles.css");
+        var PostPreview = createClass({
+            render: function() {
+                var entry = this.props.entry;
+                var image = entry.getIn(['data', 'image']);
+                var bg = this.props.getAsset(image);
+                return h('div', {},
+                h('h1', {}, entry.getIn(['data', 'title'])),
+                h('img', {src: bg.toString()}),
+                h('div', {"className": "text"}, this.props.widgetFor('body'))
+                );
+            }
+        });
+            
+        CMS.registerPreviewTemplate("posts", PostPreview);
     </script>
 </body>
 </html>

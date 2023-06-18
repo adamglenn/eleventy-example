@@ -1,9 +1,5 @@
 // Adding a lead utility class that contains helvetica neue light
 
-.lead {
-  @include helvetica-neue-light();
-}
-
 // NOTE: These override Bootstrap’s .display classes. We want different sizes than Bootstrap provides by default.
 
 .display-1 {
@@ -72,6 +68,5 @@
 
 blockquote {
   border-left: 1px solid $wvu-gold;
-  font-family: $iowan-old-style-black;
   padding-left: $spacer * .5;
 }

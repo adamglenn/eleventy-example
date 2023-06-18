@@ -3,28 +3,6 @@
 
 $variable-prefix: bs-;       
 
-// Helvetica Neue
-$helvetica-neue-fallback: 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif !default;
-$helvetica-neue: 'NeueHelvetica55Roman', $helvetica-neue-fallback !default;
-$wvu-shout-fallback: 'Arial Narrow', Impact, Charcoal, 'Arial Black', $helvetica-neue-fallback !default;
-
-// Webfonts from Monotype.com
-$helvetica-neue-light: 'NeueHelvetica45Light', $helvetica-neue-fallback !default;
-$helvetica-neue-bold: 'NeueHelvetica75Bold', $helvetica-neue-fallback !default;
-$helvetica-neue-italic: 'NeueHelvetica56Italic', $helvetica-neue-fallback !default;
-$helvetica-neue-bold-italic: 'NeueHelvetica76BoldItalic', $helvetica-neue-fallback !default;
-$helvetica-neue-condensed-black: 'NeueHelvetica97CondensedBlack', $wvu-shout-fallback !default;
-
-// Iowan
-$iowan-fallback: Iowan, 'Times New Roman', Times, Georgia, serif !default;
-$iowan-old-style: 'IowanOldStyleBTRoman', $iowan-fallback !default;
-$iowan-old-style-italic: 'IowanOldStyleBTItalic', $iowan-fallback !default;
-$iowan-old-style-black: 'IowanOldStyleBTBlack', $iowan-fallback !default;
-$iowan-old-style-black-italic: 'IowanOldStyleBTBlackItalic', $iowan-fallback !default;
-
-// Shout
-$wvu-shout-font-family: $helvetica-neue-condensed-black !default;
-
 // Font size
 $wvu-font-size-base: 1rem !default;
 
@@ -35,19 +13,15 @@ $wvu-p-measure: 48rem !default;
 $wvu-shout-line-height: 0.80487em !default;
 $wvu-traditional-audience-line-height: 1.16666666667em !default;
 
-// Audiences
-$wvu-traditional-audience: $iowan-old-style !default;
-$narrow-audience: $iowan-old-style-italic !default;
-
 // Tracking
 $wvu-letter-spacing-width: 2px !default;
 
 :root {
-    --bs-font-sans-serif: $helvtica-neue, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 $font-family-base: var(--#{$variable-prefix}font-sans-serif);
-$headings-font-family: $helvetica-neue;
+$headings-font-family: $font-family-base;
 
 // Color
 //==================================================
@@ -109,8 +83,6 @@ $custom-colors: (
     "doody": $doody
 );
 
-$theme-colors: map-merge($theme-colors, $custom-colors);
-
 // Breadcrumbs
 $wvu-breadcrumbs-color: #8F9699;
 
@@ -138,7 +110,6 @@ $wvu-shout-margin: 0 0 .5em !default;
 
 // Hero Typography
 $wvu-hero-font-color: white !default;
-$wvu-hero-title-typeface: $wvu-shout-font-family !default;
 $wvu-hero-vignetting-opacity: .85 !default;
 $wvu-typography-line-length: 45rem !default;
 $wvu-tint-opacity: .9 !default;

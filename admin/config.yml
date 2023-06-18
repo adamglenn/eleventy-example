@@ -42,8 +42,8 @@ collections:
         label: "Global Settings"
         name: "globalSettings"
         fields:
-          - {label: "Logo", name: "logo", widget: "image"}
-          - {label: "Description", name: "description", widget: "text"}
-          - {label: "Google Tag Manager ID", name: "gtm_id", widget: "string"}
-          - {label: "Phone", name: "phone", widget: "string"}
-          - {label: "Email", name: "mailto", widget: "string"}
+          - {label: "Logo", name: "logo", widget: "image", required: false}
+          - {label: "Description", name: "description", widget: "text", required: false}
+          - {label: "Google Tag Manager ID", name: "gtm_id", widget: "string", required: false}
+          - {label: "Phone", name: "phone", widget: "string", required: false}
+          - {label: "Email", name: "mailto", widget: "string", required: false}

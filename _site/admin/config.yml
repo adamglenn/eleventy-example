@@ -38,7 +38,7 @@ collections:
   - name: "settings"
     label: "Settings"
     files:
-      - file: "_data/settings.yml"
+      - file: "_data/settings.yaml"
         label: "Global Settings"
         name: "globalSettings"
         fields:

@@ -14,3 +14,12 @@
     </div>
   </div>
 </main>
+
+{% image "assets/img/fleer-box-v2.0.0.jpg", "Fleer Box", "img-class" %}
+
+{% for post in collections.post %}
+  <h2>{{ post.data.title }}</h2>
+  {% if post.data.thumbnail != null %}
+    {% image post.data.thumbnail %}
+  {% endif %}
+{% endfor %}

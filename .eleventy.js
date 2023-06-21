@@ -52,42 +52,10 @@ module.exports = function(eleventyConfig) {
 };
 
 (async () => {
-	let stats = await Image("…", {
-		// Array of integers or "auto"
-		widths: ["auto"],
-
-		// Array of file format extensions or "auto"
-		formats: ["webp", "jpeg"],
-
-		// the URLs in markup are prefixed with this
-		urlPath: "/assets/img/",
-
-		// the images are written here
-		outputDir: "./assets/img/",
-
-		// skip raster formats if SVG available
-		svgShortCircuit: false,
-
-		// allow svg to upscale beyond supplied dimensions?
-		svgAllowUpscale: true,
-
-		// the file name hash length
-		hashLength: 10,
-
-		// Custom file name callback (see below)
-		filenameFormat: function() {},
-
-		// Advanced options passed to eleventy-fetch
-		cacheOptions: {},
-
-		// Advanced options passed to sharp
-		sharpOptions: {},
-		sharpWebpOptions: {},
-		sharpPngOptions: {},
-		sharpJpegOptions: {},
-		sharpAvifOptions: {},
-
-		// Custom full URLs (use with hosted services, see below)
-		urlFormat: function() {},
+	let url = "https://images.unsplash.com/photo-1608178398319-48f814d0750c";
+	let stats = await Image(url, {
+		widths: [300]
 	});
+
+	console.log( stats );
 })();

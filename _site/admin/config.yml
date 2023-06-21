@@ -8,12 +8,6 @@ display_url: https://ag-11ty-example.netlify.app
 collections:
   - name: "pages"
     label: "Pages"
-    folder: "_pages"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Title", name: "title", widget: "string"}
     files:
       - label: "Home"
         name: "home"

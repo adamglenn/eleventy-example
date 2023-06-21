@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: card
 sport: Football
 year: "1962"
 brand: Topps

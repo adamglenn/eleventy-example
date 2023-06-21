@@ -11,9 +11,9 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "site/content/home.yaml"
+        file: "_data/home.yaml"
         fields:
-          - {label: Title, name: title, widget: string}
+          - {label: Headline, name: headline, widget: string}
           - {label: Intro, name: intro, widget: markdown}
           - {label: Primary Call To Action, name: primaryCallToAction, widget: string}
           - {label: Secondary Call To Action, name: secondaryCallToAction, widget: string}

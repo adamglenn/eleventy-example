@@ -3,6 +3,7 @@ const { Liquid } = require("liquidjs");
 const yaml = require("js-yaml");
 const Image = require("@11ty/eleventy-img");
 const { eleventyImagePlugin } = require("@11ty/eleventy-img");
+const markdownIt = require("markdown-it");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("stylesheets/styles.css");
@@ -39,6 +40,15 @@ module.exports = function(eleventyConfig) {
 		let data = metadata.webp[metadata.webp.length - 1];
 		return `<img src="${data.url}" alt="${alt}" loading="lazy" decoding="async">`;
 	});
+
+  // Add within your config module
+  const md = new markdownIt({
+    html: true,
+  });
+
+  eleventyConfig.addFilter("markdown", (content) => {
+    return md.render(content);
+  });
 
   eleventyConfig.addShortcode("bgImage", async function(src, alt) {
 		if(alt === undefined) {

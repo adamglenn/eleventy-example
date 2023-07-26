@@ -7,7 +7,7 @@
                   <div class="bg-blue text-white py-5 px-3 h-100">
                       <div class="wvu-z-index-content">
                           <h3 class="h1 wvu-bar wvu-bar--bottom wvu-bar--white">{{ service.service }}</h3>
-                          <p class="fs-4">{{ service.description }}</p>
+                          <div class="fs-4">{{ service.description | markdown | safe }}</div>
                       </div>
                   </div>
               </div>

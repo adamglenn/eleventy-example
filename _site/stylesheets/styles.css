@@ -12276,7 +12276,7 @@ textarea.form-control-lg {
   padding-top: 1.5rem;
 }
 .wvu-bar:before {
-  border-top-color: #ffc107 !important;
+  border-top-color: #e5b33e !important;
   border-top-style: dashed !important;
   border-top-width: 3px !important;
   content: "" !important;
@@ -12295,7 +12295,7 @@ textarea.form-control-lg {
   display: none !important;
 }
 .wvu-bar.wvu-bar--bottom:after {
-  border-top-color: #ffc107 !important;
+  border-top-color: #e5b33e !important;
   border-top-style: dashed !important;
   border-top-width: 3px !important;
   content: "" !important;

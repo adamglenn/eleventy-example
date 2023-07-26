@@ -7,6 +7,11 @@ const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("stylesheets/styles.css");
   eleventyConfig.addPassthroughCopy("admin/config.yml");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("android-chrome-192x192.png");
+  eleventyConfig.addPassthroughCopy("android-chrome-512x512.png");
+  eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy("favicon-16x16.png");
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 

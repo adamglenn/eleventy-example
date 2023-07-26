@@ -15,14 +15,18 @@ collections:
         fields:
           - {label: Headline, name: headline, widget: string}
           - {label: Intro, name: intro, widget: markdown}
-          - {label: Primary Call To Action, name: primaryCallToAction, widget: string}
-          - {label: Secondary Call To Action, name: secondaryCallToAction, widget: string}
           - label: Features
             name: features
             widget: list
             fields:
               - {label: Feature, name: feature, widget: string}
               - {label: Description, name: description, widget: string}
+          - label: Services
+            name: services
+            widget: list
+            fields:
+              - {label: Service, name: service, widget: markdown}
+              - {label: Description, name: description, widget: markdown}
   - name: "posts" # Used in routes, e.g., /admin/collections/posts
     label: "Articles" # Used in the UI
     folder: "_posts" # The path to the folder where the documents are stored
